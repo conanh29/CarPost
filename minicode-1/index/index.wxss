@@ -1,0 +1,19 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+.section_input {
+  flex: 1;
+}
+page {
+  background-color: #ebebeb;
+}
+.section {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  vertical-align: middle;
+  padding: 10px 10rpx;
+  border-bottom: 1px solid #ddd;
+}

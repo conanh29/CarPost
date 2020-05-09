@@ -1,0 +1,14 @@
+<view>模拟车辆进出</view>
+<view class="section">
+  <view class="section_input">
+    <input placeholder="输入车牌号" bindinput="putCarNum"></input>
+  </view>
+</view>
+<button type="primary" bindtap="putCar">驶入车辆</button>
+
+<view class="section">
+  <view class="section_input">
+    <input placeholder="输入车牌号" bindinput="getCarNum"></input>
+  </view>
+</view>
+<button type="primary" bindtap="getCar">取车</button>

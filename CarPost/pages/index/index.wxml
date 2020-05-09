@@ -1,0 +1,29 @@
+<!--index/index.wxml-->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location class="map"></map>
+
+<view class="nearby-parkingLot">
+  <view class="plain-text inline-block">在您附近找到</view>
+  <view class="left-number inline-block">{{parkingNum}}</view>
+  <view class="plain-text inline-block">家智能停车场</view>
+</view>
+
+<view class='parking-list-container'>
+  <block wx:for="{{parkinglotlist}}" wx:for-index="bindex" wx:key="key">
+    <view class="parking-list-section center" bindtap="bindParkingListItemTap" data-bindex='{{bindex}}'>
+      <view class="content">
+        <view class="parking-list-item flex">
+          <view class="parking-name">{{item.name}}</view>
+        </view>
+        <view class="parking-list-item flex">
+          <view class="u-1of2 plain-text">距您:
+            <view class="parking-distance">{{item.dis}}米</view>
+          </view>
+          <view class="plain-text">剩余车位:
+            <view class="left-number">{{item.leftSpace}}</view>
+          </view>
+        </view>
+      </view>
+      <image class="arrow-right" src="/images/arrowright.png"></image>
+    </view>
+  </block>
+</view>

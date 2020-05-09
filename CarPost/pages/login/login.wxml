@@ -1,0 +1,21 @@
+<!--pages/login/login.wxml-->
+<view class="inputline">
+  <view class="flex">
+    <view class="section">
+      <view class="login-section_title">手机号</view>
+      <view class="section_input">
+        <input value="{{oldphone}}" placeholder="输入手机号" bindinput="inputPhone"></input>
+      </view>
+    </view>
+    <view class="get-verify-code center flex">
+      获取验证码
+    </view>
+  </view>
+  <view class="section">
+    <view class="login-section_title">验证码</view>
+    <view class="section_input">
+      <input name="idno" placeholder="输入验证码" bindblur="bindIdnoBlur"></input>
+    </view>
+  </view>
+</view>
+<button type="primary" bindtap="onLogin">登录</button>

@@ -1,0 +1,72 @@
+<!--pages/user/user.wxml-->
+<view class="panel">
+  <image class="panel-pic" src="/images/bg.jpg" mode="aspectFill"></image>
+  <open-data type="userAvatarUrl" class="avatar-icon"></open-data>
+  <open-data type="userNickName" lang="zh_CN" class="nickName"></open-data>
+</view>
+
+<view class="menu-list-container center">
+  <view class="menu-list-item" bindtap="changePhone">
+    <image src="/images/icon/phone.png" class="menu-list-icon"></image>
+    <view class="menu-list-text">登录手机</view>
+    <view class="menu-comment">{{oldPhoneNum}}</view>
+    <block wx:if="{{isShowChangePhone}}">
+      <view class='toast-box'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+          <view class='toast-title'>
+            <text>修改手机</text>
+          </view>
+          <view class='toast-main'>
+            <view class='toast-input'>
+              <input placeholder='请输入新手机号' bindinput='setNewPhone' data-name='_newphone'></input>
+            </view>
+          </view>
+          <view class='toast-button'>
+            <button class='button1' catchtap='onCancelChange'>取消</button>
+            <button class='button2' catchtap='onConfirmChange'>确定</button>
+          </view>
+        </view>
+      </view>
+    </block>
+    <image class="menu-arrow-right" src="/images/arrowright.png"></image>
+  </view>
+  <view class="menu-list-item" bindtap="changeCar">
+    <image src="/images/icon/day_view.png" class="menu-list-icon"></image>
+    <view class="menu-list-text">我的车牌</view>
+    <view class="menu-comment">{{carNumber}}</view>
+    <block wx:if="{{isShowConfirm}}">
+      <view class='toast-box'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+          <view class='toast-title'>
+            <text>修改车牌</text>
+          </view>
+          <view class='toast-main'>
+            <view class='toast-input'>
+              <input placeholder='请输入新车牌' bindinput='setValue' data-name='stuEidtName'></input>
+            </view>
+          </view>
+          <view class='toast-button'>
+            <button class='button1' catchtap='onCancel'>取消</button>
+            <button class='button2' catchtap='onConfirm'>确定</button>
+          </view>
+        </view>
+      </view>
+    </block>
+    <image class="menu-arrow-right" src="/images/arrowright.png"></image>
+  </view>
+  <view class="menu-list-item" bindtap="viewlist">
+    <image src="/images/icon/money_bag.png" class="menu-list-icon"></image>
+    <view class="menu-list-text">消费记录</view>
+    <view class="menu-comment">查看消费记录</view>
+    <image class="menu-arrow-right" src="/images/arrowright.png"></image>
+  </view>
+</view>
+
+<view class="menu-list-container center">
+  <view class="menu-list-item center" bindtap="logOut">
+    <view class="text-center" style="color:red;font-size:16px;">退出登录</view>
+    <!--<button style="color:red;font-size:16px;" class="text-center" bindtap="logOut">退出登录</button>-->
+  </view>
+</view>

@@ -1,0 +1,58 @@
+<!--pages/preOrder/preOrder.wxml-->
+<view wx:if="{{status=='0'}}">
+  <view class="menu-list-container center">
+    <view class="menu-list-item">
+      <view class="menu-list-text">停车场</view>
+      <view class="menu-comment">{{name}}</view>
+    </view>
+  </view>
+
+  <view class="menu-list-container center">
+    <view class="menu-list-item">
+      <view class="menu-list-text">预留时间</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{waittime}}" mode="selector">
+        <view class="picker" class="menu-comment">{{waittime[index]}}分钟</view>
+      </picker>
+      <image class="menu-arrow-right" src="/images/arrowright.png"></image>
+    </view>
+    <view class="menu-list-item">
+      <view class="menu-list-text">待停车辆</view>
+      <view class="menu-comment">{{carNum}}</view>
+      <image class="menu-arrow-right" src="/images/arrowright.png"></image>
+    </view>
+  </view>
+
+  <view class="bottom-btn-group">
+    <view class="bottom-btn primary u-auto" bindtap="preOrder">提交预约</view>
+  </view>
+</view>
+<view wx:else>
+  <view class="menu-list-container center">
+    <view class="menu-list-item">
+      <view class="menu-list-text">停车场</view>
+      <view class="menu-comment">{{name}}</view>
+    </view>
+  </view>
+
+  <view class="menu-list-container center">
+    <view class="menu-list-item">
+      <view class="menu-list-text">预留时间</view>
+      <view class="menu-comment">{{ordertime}}分钟</view>
+      <image class="menu-arrow-right" src="/images/arrowright.png"></image>
+    </view>
+    <view class="menu-list-item">
+      <view class="menu-list-text">预约时间</view>
+      <view class="menu-comment">{{orderCreate}}</view>
+      <image class="menu-arrow-right" src="/images/arrowright.png"></image>
+    </view>
+    <view class="menu-list-item">
+      <view class="menu-list-text">待停车辆</view>
+      <view class="menu-comment">{{carNum}}</view>
+      <image class="menu-arrow-right" src="/images/arrowright.png"></image>
+    </view>
+  </view>
+
+  <view class="bottom-btn-group">
+    <view class="bottom-btn primary u-auto" bindtap="cancelOrder">取消预约</view>
+  </view>
+</view>

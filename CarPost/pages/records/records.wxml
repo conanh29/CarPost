@@ -1,0 +1,35 @@
+<!--pages/records/records.wxml-->
+<view wx:if="{{haverecord==true}}">
+  <scroll-view>
+    <view class="list-view" wx:for="{{records}}" wx:for-index="bindex" wx:key="key">
+      <view class="bottomGrayboder list-view-item">
+        <view class="clock_group" style="flex-direction:row;">
+          <image class="clock" src="../../images/clock.png"></image>
+          <view class="time-view-padding">创建时间</view>
+          <view class="time-view-padding">{{item.create}}</view>
+        </view>
+        <view>
+          <view class="text-view">停车位置</view>
+          <view class="local-view">{{item.local}}</view>
+        </view>
+        <view>
+          <view class="text-view">开始时间</view>
+          <view class="local-view">{{item.start}}</view>
+        </view>
+        <view>
+          <view class="text-view">结束时间</view>
+          <view class="local-view">{{item.end}}</view>
+        </view>
+        <view>
+          <view class="text-view">停车消费</view>
+          <view class="money-text">{{item.total_cost}}</view>
+        </view>
+        <view class="text-view">停车时长</view>
+        <view class="Timer-view">{{item.time}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view wx:else>
+  <view class="text">暂无消费记录</view>
+</view>

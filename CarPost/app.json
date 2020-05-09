@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/getCar/getCar",
+    "pages/detail/detail",
+    "pages/preOrder/preOrder",
+    "pages/getCar/paidSuccess/paidSuccess",
+    "pages/records/records",
+    "pages/login/login"
+  ],
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#268dcd",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon/steering_wheel.png",
+        "selectedIconPath": "images/icon/steering_wheel.active.png",
+        "text": "预约停车"
+      },
+      {
+        "pagePath": "pages/getCar/getCar",
+        "iconPath": "images/icon/stopwatch.png",
+        "selectedIconPath": "images/icon/stopwatch.active.png",
+        "text": "取车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/icon/user_male3.png",
+        "selectedIconPath": "images/icon/user_male3.active.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "停车",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#f7f7f7"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,29 @@
+/* pages/login/login.wxss */
+
+page {
+  background-color: #ebebeb;
+}
+
+.inputline {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  padding: 100rpx 0;
+}
+
+.get-verify-code {
+  width: 200rpx;
+  padding: 10rpx;
+  background-color: #48c23d;
+  color: white;
+}
+
+.three-column {
+  padding: 10rpx;
+  column-count: 3;
+  column-gap: 10rpx;
+}
+
+.login-section-title {
+  width: 50rpx;
+}
